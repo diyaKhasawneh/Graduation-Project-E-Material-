@@ -1,0 +1,230 @@
+/*
+1- Common Styles
+2- Genral Styles 
+3- Section
+    3.0 Header section
+    3.1 Home section 
+    3.2 About section 
+    3.3 portfolio section 
+    3.4 Service section 
+    3.5 prices section 
+    3.6 Team section 
+    3.7 Blog Page 
+    3.8 contact section 
+*/
+/* 1- Common 
+- container
+-overflow
+*/
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.hover-opcity{
+    transition: opacity .5s;
+}
+.hover-opcity:hover{
+    opacity: 0.8;
+}
+
+/*2- General Css style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*css3*/
+}
+.container{
+width: 80%;
+
+margin: auto;
+
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+.clear{
+    clear: both;
+}
+h1 , h2, h3, h4, h5 ,h6{
+    font-family: montesrrat,sans-serif;
+}
+button{
+    font-family: inherit;
+}
+a{
+    text-decoration: none;
+}
+.pd-y{
+    padding: 120px 0;
+}
+.section-header{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.section-header .section-title{
+    font-size: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.section-header .line{
+    display: block;
+    height: 5px;
+    width: 60px;
+    margin:0 auto 70px auto;
+    background-color: #6195ff;
+}
+/*3- Sections styles */
+/* Header section */
+.header{
+    /* background-color: gray; */
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.header-content{
+    /* overflow: hidden; to solve float problem */
+}
+.header .logo{
+    width: 40%;
+    float: left;
+}
+.header .logo img{
+    width: 20%;
+    
+}
+.header .nav{
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+.header .nav > li{
+display: inline-block;
+text-align: right;
+/* width: 85px; */
+}
+.header .nav > li > a{
+    color: #fff;
+    font-size: 15px;
+    
+    padding: 30px 12px;
+    display: block;
+    
+}
+.header .nav > li > a.active:after,
+.header .nav > li > a:after{
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #6195ff;
+    margin-top: 2px;
+    transition: width 0.5s;
+}
+.header .nav > li > a:after{
+    width: 0;
+}
+.header .nav > li > a.active:after{
+    width: 100%;
+}
+.header .nav > li > a:hover::after{
+    width: 100%;
+
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    background-color: #6195ff;
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top: 70%;
+    opacity: 0;
+    visibility:hidden;
+    transition: opacity 0.5s;
+}
+.dropdown-menu a{
+    display: block;
+    color: white;
+    padding: 10px;
+    
+}
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+}
+/* Home section */
+.home{
+    height: 100vh;
+    background-image: url(images/library-interfeace.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* css3 */
+    position:relative ;
+}
+
+.home-content{
+    /* background-color: chartreuse; */
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.home .title{
+    color:#fff;
+    font-size: 3.1rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+.home .home-desc{
+    margin: 20px 0;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.home .btn{
+    min-width: 150px;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+booter{
+    position: absolute;
+}
+.home .btn-borrow{
+    margin-right: 10px;
+    background-color: #fff;
+}
+.home .btn-watch{
+    background-color: #6195ff;
+    color: white;
+}
+/* About section */
+
+.about{
+
+}
+.about-cotent{
+    overflow: hidden;
+}
+.about-item{
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #888;
+    padding: 30px 15px;
+    /* display: inline-block; */
+}
+.about-item.mg{
+    margin: 0 5%;
+}
+
